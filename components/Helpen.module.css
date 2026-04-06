@@ -1,0 +1,100 @@
+.helpen {
+  background: var(--white);
+}
+
+.header {
+  margin-bottom: 56px;
+}
+
+/* ─── GRID ───────────────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+/* ─── KAART ──────────────────────────────────────────────────────────── */
+.kaart {
+  background: var(--grey);
+  border-radius: 10px;
+  padding: 32px 24px;
+  border-top: 4px solid var(--orange);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kaart:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 51, 102, 0.1);
+}
+
+.kaartIcon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.kaartTitel {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.kaartSubtitel {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+
+.kaartTekst {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ─── CTA ────────────────────────────────────────────────────────────── */
+.cta {
+  text-align: center;
+  padding: 40px;
+  background: var(--blue);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta p {
+    text-align: center;
+  }
+}

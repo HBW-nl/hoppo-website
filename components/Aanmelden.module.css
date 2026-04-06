@@ -1,0 +1,173 @@
+.aanmelden {
+  background: var(--grey);
+}
+
+.aanmeldInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* ─── LINKER KOLOM ──────────────────────────────────────────────────── */
+.aanmeldText h2 {
+  margin-bottom: 16px;
+}
+
+.aanmeldText p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.verwachtTitel {
+  color: var(--blue) !important;
+  font-weight: 600 !important;
+}
+
+.verwachtList {
+  margin-top: 12px;
+  padding-left: 18px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
+/* ─── RECHTER KOLOM: FORMULIER ──────────────────────────────────────── */
+.aanmeldForm {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 40px rgba(0, 51, 102, 0.1);
+}
+
+.formTitle {
+  font-size: 1.6rem;
+  color: var(--blue);
+  margin-bottom: 6px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.formSubtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+
+.formGroup {
+  margin-bottom: 18px;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 7px;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid #e0deda;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.97rem;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.formGroup input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+.formGroup input::placeholder {
+  color: #aaa;
+}
+
+.textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid #e0deda;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.97rem;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  resize: vertical;
+  min-height: 110px;
+}
+
+.textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+.textarea::placeholder {
+  color: #aaa;
+}
+
+.optioneel {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.formSubmit {
+  width: 100%;
+  padding: 16px !important;
+  font-size: 1rem !important;
+}
+
+.formNote {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: #999;
+  text-align: center;
+}
+
+/* ─── SUCCESS STATE ─────────────────────────────────────────────────── */
+.successMsg {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.successIcon {
+  width: 60px;
+  height: 60px;
+  background: #2a7a4b;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.successMsg p {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.successMsg strong {
+  color: var(--blue);
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .aanmeldInner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}

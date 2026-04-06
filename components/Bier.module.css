@@ -1,0 +1,150 @@
+.bier {
+  background: var(--grey);
+}
+
+.bierHeader {
+  margin-bottom: 56px;
+}
+
+.bierHeader .section-lead {
+  margin: 0 auto;
+}
+
+/* ─── GRID ──────────────────────────────────────────────────────────── */
+.bierGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+/* ─── CARD ──────────────────────────────────────────────────────────── */
+.bierCard {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 51, 102, 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.bierCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 51, 102, 0.16);
+}
+
+.bierCardImgWrap {
+  position: relative;
+}
+
+.bierCardImg {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.bierBadge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.bierCardBody {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bierCardMeta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.bierPill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1.5px solid;
+}
+
+.bierPill.alc {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+.bierPill.type {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
+.bierCardBody h3 {
+  font-size: 1.6rem;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.bierCardBody p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.bierCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.bierPrice {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.bierPrice span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.meerInfoBtn {
+  padding: 10px 20px !important;
+  font-size: 0.85rem !important;
+}
+
+.bierSoon {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .bierGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .bierGrid {
+    grid-template-columns: 1fr;
+  }
+}

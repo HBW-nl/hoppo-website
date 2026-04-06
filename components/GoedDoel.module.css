@@ -1,0 +1,207 @@
+.doel {
+  background: var(--blue);
+  padding: 90px 0;
+}
+
+.doelInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* ─── LINKER KOLOM ──────────────────────────────────────────────────── */
+.doelIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.tag {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.doelText h2 {
+  margin-bottom: 16px;
+}
+
+.doelText p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}
+
+/* ─── STATISTIEKEN ──────────────────────────────────────────────────── */
+.statRow {
+  display: flex;
+  gap: 40px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.stat strong {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--orange);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.stat span {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ─── RECHTER KAART ─────────────────────────────────────────────────── */
+.doelVisual {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.doelVisual.zichtbaar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── BIER HEADER ───────────────────────────────────────────────────── */
+.bierHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.bierEmoji {
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.bierLabel {
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 2px !important;
+}
+
+.bierPrijs {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem !important;
+  color: var(--white) !important;
+  letter-spacing: 0.04em;
+  line-height: 1 !important;
+}
+
+/* ─── GESEGMENTEERDE BALK ───────────────────────────────────────────── */
+.balk {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.balkSegment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  transition: filter 0.2s;
+}
+
+.balkSegment:hover {
+  filter: brightness(1.1);
+}
+
+.balkVariabel { background: rgba(255, 255, 255, 0.25); }
+.balkVast     { background: rgba(255, 255, 255, 0.12); }
+.balkDon      { background: var(--orange); }
+
+/* ─── LEGENDA ────────────────────────────────────────────────────────── */
+.legenda {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.legendaItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  opacity: 0;
+  transform: translateX(-12px);
+}
+
+.legendaItem.legendaIn {
+  animation: legendaInkomst 0.5s ease forwards;
+}
+
+@keyframes legendaInkomst {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.legendaDot {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  margin-top: 3px;
+}
+
+.dotVariabel { background: rgba(255, 255, 255, 0.25); border: 1.5px solid rgba(255,255,255,0.4); }
+.dotVast     { background: rgba(255, 255, 255, 0.12); border: 1.5px solid rgba(255,255,255,0.25); }
+.dotDon      { background: var(--orange); }
+
+.legendaItem strong {
+  display: block;
+  color: var(--white);
+  font-size: 0.88rem;
+  margin-bottom: 2px;
+}
+
+.legendaItem p {
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-size: 0.78rem !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.doelLink {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--orange);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.doelLink:hover {
+  opacity: 0.75;
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .doelInner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

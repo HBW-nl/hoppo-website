@@ -1,0 +1,124 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--blue);
+  padding: 18px 0;
+  transition: padding 0.3s, box-shadow 0.3s;
+}
+
+.nav.scrolled {
+  padding: 10px 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logoImg {
+  height: 72px !important;
+  width: auto !important;
+  transition: height 0.3s;
+}
+
+.scrolled .logoImg {
+  height: 52px !important;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.navLinks a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.navLinks a:hover {
+  color: var(--orange);
+}
+
+.navCta {
+  flex-shrink: 0;
+}
+
+/* ─── HAMBURGER ─────────────────────────────────────────────────────── */
+.navToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.navToggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.navToggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navToggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.navToggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .navToggle {
+    display: flex;
+  }
+
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--blue-dark);
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navLinks li a {
+    display: block;
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .navCta {
+    display: none;
+  }
+}
